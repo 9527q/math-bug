@@ -55,6 +55,9 @@ def parse_godel_number(godel_number: int) -> str:
         elif label == "0":
             label = str(next_add)
             next_add = 0
+        elif label != "0" and next_add == 1:
+            label_list.append("s")
+            next_add = 0
 
         label_list.append(label)
 
@@ -63,6 +66,6 @@ def parse_godel_number(godel_number: int) -> str:
 
 
 if __name__ == '__main__':
-    number = 134014370487315742199056189063162190005814697956250000000
+    number = 23403180503121036356761714113406299710314692481511385567664956507146714708056647542459466306001890272956089036238639458469687500000000
     print("哥德尔数：", number)
     print("命题（latex）：", parse_godel_number(number))

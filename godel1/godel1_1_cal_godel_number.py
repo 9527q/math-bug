@@ -85,5 +85,5 @@ def cal_godel_number(latex: str) -> int:
 
 
 if __name__ == '__main__':
-    latex = r""
+    latex = r"( s x = s y ) \supset ( x = y )"
     print("哥德尔数：", cal_godel_number(latex))
